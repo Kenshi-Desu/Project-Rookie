@@ -1,0 +1,53 @@
+## ==========================================
+## GLOBAL & ENVIRONMENT FILES
+## ==========================================
+.DS_Store
+Thumbs.db
+*.log
+logs/
+
+## ==========================================
+## BACKEND RULES (.NET 10)
+## ==========================================
+# Target the backend build folders explicitly
+Backend/bin/
+Backend/obj/
+
+# User-specific IDE/Build files
+Backend/*.rsuser
+Backend/*.suo
+Backend/*.user
+Backend/*.userosscache
+Backend/*.sln.docstates
+
+## ==========================================
+## FRONTEND RULES (Vite / React / Node)
+## ==========================================
+# Target dependency and distribution folders explicitly
+Frontend/node_modules/
+Frontend/dist/
+Frontend/dist-ssr/
+
+# Ignore local environment override files in Frontend
+Frontend/.env.local
+Frontend/.env.*.local
+
+# Logs from package managers
+Frontend/npm-debug.log*
+Frontend/yarn-debug.log*
+Frontend/yarn-error.log*
+Frontend/pnpm-debug.log*
+
+## ==========================================
+## CODESPACE & IDE RULES (Root level)
+## ==========================================
+.vs/
+.idea/
+*.sln.iml
+
+# VS Code rules (Keep settings but ignore workspace caches)
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
