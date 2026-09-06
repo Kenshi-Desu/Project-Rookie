@@ -1,14 +1,19 @@
+using Backend.Model.Junctions;
+
 namespace Backend.Model.Entities;
 
 public class Company
 {
-    public int Id { get; set; }
+    // PK
+    public long Id { get; set; }
 
-    // Company Data
-    public required string Logo { get; set; }
+    // Data
+    public required string LogoImageUrl { get; set; }
     public required string Name { get; set; }
-    public required string Founded { get; set; }
-    public required string Founders { get; set; }
     public required string Headquarters { get; set; }
     public required string Description { get; set; }
+
+    // Relationships
+    public ICollection<Game> DevelopedGames { get; set; } = new List<Game>();
+    public ICollection<CompanyFounder> Founders { get; set; } = new List<CompanyFounder>();
 }

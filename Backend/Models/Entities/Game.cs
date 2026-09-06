@@ -4,14 +4,25 @@ namespace Backend.Model.Entities;
 
 public class Game
 {
-    public int Id { get; set; }
+    // PK
+    public long Id { get; set; }
 
-    // Game Data
-    public required string Logo { get; set; }
-    public required string Name { get; set; }
+    // FK
+    public long DeveloperId { get; set; }
     public required Company Developer { get; set; }
-    public required string Engine { get; set; }
 
-    // Junctions
+    // Data
+    public required string LogoImageUrl { get; set; }
+    public required string HeroImageUrl { get; set; }
+    public required string Name { get; set; }
+    public required string Engine { get; set; }
+    public required string Description { get; set; }
+
+    // Junction
     public ICollection<GameAvailablePlatform> AvailablePlatforms { get; set; } = new List<GameAvailablePlatform>();
+
+    // Relationships
+    public ICollection<Character> Characters { get; set; } = new List<Character>();
+    public ICollection<Weapon> Weapons { get; set; } = new List<Weapon>();
+    public ICollection<Region> Regions { get; set; } = new List<Region>();
 }
