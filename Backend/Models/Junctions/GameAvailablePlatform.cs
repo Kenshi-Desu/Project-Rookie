@@ -4,8 +4,12 @@ namespace Backend.Model.Junctions;
 
 public class GameAvailablePlatform
 {
-    public int GameId { get; set; }
+    // FK
+    public long GameId { get; set; }
     public required Game Game { get; set; }
-    public int PlatformId { get; set; }
+    public long PlatformId { get; set; }
     public required Platform Platform { get; set; }
+
+    // Data
+    public required DateOnly ReleaseDate { get; set; }
 }
