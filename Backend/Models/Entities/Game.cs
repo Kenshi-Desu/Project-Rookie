@@ -21,7 +21,7 @@ public class Game
     // Junction
     public ICollection<GameAvailablePlatform> AvailablePlatforms { get; set; } = new List<GameAvailablePlatform>();
 
-    // Relationships
+    // Relationship
     public ICollection<Character> Characters { get; set; } = new List<Character>();
     public ICollection<Weapon> Weapons { get; set; } = new List<Weapon>();
     public ICollection<Region> Regions { get; set; } = new List<Region>();

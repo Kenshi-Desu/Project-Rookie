@@ -13,7 +13,9 @@ public class Company
     public required string Headquarters { get; set; }
     public required string Description { get; set; }
 
-    // Relationships
+    // Relationship
     public ICollection<Game> DevelopedGames { get; set; } = new List<Game>();
+
+    // Junction
     public ICollection<CompanyFounder> Founders { get; set; } = new List<CompanyFounder>();
 }
