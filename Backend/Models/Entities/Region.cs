@@ -14,4 +14,7 @@ public class Region
     public required string LogoImageUrl { get; set; }
     public required string Name { get; set; }
     public required string Description { get; set; }
+
+    // Relationship
+    public ICollection<Character> Characters { get; set; } = new List<Character>();
 }

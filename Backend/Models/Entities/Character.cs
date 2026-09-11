@@ -11,12 +11,10 @@ public class Character
     // FK
     public long GameId { get; set; }
     public required Game Game { get; set; }
-    public long SignatureWeaponId { get; set; }
-    public required Weapon SignatureWeapon { get; set; }
-    public long BirthPlaceId { get; set; }
-    public required Region BirthPlace { get; set; }
-    public long NationId { get; set; }
-    public required Region Nation { get; set; }
+    public long? BirthPlaceId { get; set; }
+    public required Region? BirthPlace { get; set; }
+    public long? NationId { get; set; }
+    public required Region? Nation { get; set; }
 
     // Data
     public required string AvatarImageUrl { get; set; }
@@ -26,6 +24,7 @@ public class Character
     public required DateOnly BirthDate { get; set; }
     public required Gender Gender { get; set; } = Gender.Unknown;
     public required DateOnly ReleaseDate { get; set; }
+    public required Weapon SignatureWeapon { get; set; }
     public required string Description { get; set; }
 
     // Junction
